@@ -91,6 +91,16 @@ csrutil disable
 ```
 csrutil enable
 ```
+## 关闭输入法切换提示
+终端里运行完以下两个命令后重启 Mac
+
+```
+sudo mkdir -p /Library/Preferences/FeatureFlags/Domain
+```
+```
+sudo /usr/libexec/PlistBuddy -c "Add 'redesigned_text_cursor:Enabled' bool false" /Library/Preferences/FeatureFlags/Domain/UIKit.plist
+```
+ 
 
 ## 网页显示方框里带问号
 
