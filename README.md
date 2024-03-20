@@ -37,13 +37,6 @@ defaults write com.apple.dock autohide-delay -int 0
 killall Dock
 ```
 
-## 允许任何来源
-
-安装非 App Store 里应用，可能会出现无法安装的情况，需要打开任何来源。【终端】输入或粘贴以下命令，按回车键。
-
-```
-sudo spctl --master-disable
-```
 
 ## 密码位数
 
@@ -114,3 +107,20 @@ sudo /usr/libexec/PlistBuddy -c "Add 'redesigned_text_cursor:Enabled' bool false
 5. 终端输入：`atsutil server -shutdown`
 6. 终端输入：`atsutil server -ping`
 7. 重启电脑
+
+## 允许任何来源
+
+【终端】输入或粘贴以下命令，按回车键，输入密码按回车键。
+
+```
+sudo spctl --master-disable
+```
+
+## 提示“已损坏，无法打开，移到废纸篓”
+
+1. 打开允许任何来源（上方）
+2. 打开终端，输入 `xattr -cr`（cr后面加入一个空格），将 App 拖到终端，按回车键
+
+注1：Ventura 13 以上系统，先前往设置 - 隐私与安全性 - 完整磁盘访问权限中允许终端。然后才能操作，否则会遇到 Operation not permitted
+
+注2：macOS 13+ 以上系统上操作之后如果还是提示损坏，右键软件选择【打开】
