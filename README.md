@@ -8,13 +8,13 @@
 行数
 
 ```
-defaults write com.apple.dock springboard-rows -int 9
+defaults write com.apple.dock springboard-rows -int 7
 ```
 
 列数
 
 ```
-defaults write com.apple.dock springboard-columns -int 10
+defaults write com.apple.dock springboard-columns -int 9
 ```
 
 最后输入以下命令
